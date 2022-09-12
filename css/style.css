@@ -85,4 +85,57 @@ header {
   height: 4rem;
 }
 
+/** ***** section fonctionnement ***/
+#fonction {
+  padding: 2rem 1rem 2rem 2rem;
+}
+
+.fonction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.fonction-choix {
+  background-color: #f2f2f2;
+  padding: 0.3rem;
+  border-radius: 2rem;
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  box-shadow: rgba(50, 50, 93, 0) 0px 5px 20px 0px, rgba(0, 0, 0, 0.3) -1px 5px 30px -10px;
+}
+
+.num-order {
+  background-color: #9356DC;
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  align-items: center;
+  left: -1.5rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.text-order {
+  font-weight: lighter;
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+}
+
 /*# sourceMappingURL=style.css.map */
