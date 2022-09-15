@@ -1,93 +1,111 @@
+@charset "UTF-8";
+/*** configuartion html **/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
 /************/
 * {
+  margin: 0;
   box-sizing: border-box;
+}
+
+html {
+  line-height: 1.3;
 }
 
 body {
   width: 450px;
-  margin: 0px;
-  font-family: "Roboto", sans-serif;
+  margin: 0px 0px;
+  font-size: 1rem;
 }
 
+/**** header ****/
 header {
-  font-family: "Shrikhand", "cursive";
-  text-align: center;
-  padding: 0.3rem;
-  font-size: 20px;
-  width: 100%;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
-  margin: 0px;
-  z-index: 1000;
+  background: white;
+  z-index: 2;
+  font-family: "Shrikhand", cursive;
+  font-size: 2, 5rem;
+  height: 5rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  /*position: sticky;*/
+  top: 0;
+  display: flex;
+  align-items: center;
+  height: 4rem;
+}
+
+#logo {
+  height: 3rem;
+  margin: auto;
+  margin-bottom: 0.2rem;
+}
+
+main {
+  font-family: "Roboto", sans-serif;
+  /*  position:relative;*/
+}
+
+/**** Localisation barre ***/
+#local {
+  height: 3.5rem;
   position: relative;
 }
 
 .localisation {
   display: flex;
-  width: 100%;
-  padding: 1rem 1rem;
-  font-size: 1.2rem;
-  font-weight: 500;
+  padding: 1.2rem;
   background-color: #eaeaea;
-  gap: 0.5rem;
+  gap: 1rem;
   justify-content: center;
   justify-items: center;
 }
-
-#logo {
-  padding: 1rem 0 0.3rem 0;
+.localisation .local-icon {
+  font-size: 1.1rem;
+  margin-left: -2rem;
+}
+.localisation .Text-local {
+  font-size: 17px;
+  font-weight: 500;
+  color: #353535;
 }
 
-.text-local {
-  font-size: 500;
-}
-
-#book {
-  background-color: #f2f2f2;
-}
-
+/*** section invitation à réserver **/
 .reservation {
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  flex-direction: column;
-  padding: 2.4rem 2rem 3rem 2rem;
-  justify-content: space-between;
-}
-
-.book-titre {
-  font-size: 1.8rem;
+  background-color: #f2f2f2;
   text-align: center;
-  margin: 0px;
-  padding: 0 1rem 0 2rem;
+  padding: 2.5rem 0.2rem 3rem 0.5rem;
 }
-
-.book-text {
-  text-align: center;
-  font-size: 1.4rem;
-  font-weight: 200;
+.reservation h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
-
-.book-button {
+.reservation p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-bottom: 29px;
+}
+.reservation button {
   color: white;
-  padding: 1.5rem 3rem;
   border-radius: 30px;
-  background-color: #FF79DA;
   text-align: center;
   justify-items: center;
-  font-size: 16px;
+  font-size: 15px;
   white-space: nowrap;
-  background: linear-gradient(162deg, #FF79DA 0%, #9356DC 100%);
+  font-weight: 500;
+  background: linear-gradient(162deg, #FF79DA 1%, #9356DC 100%);
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   border: transparent;
-  margin: 1rem 0 1rem 4rem;
-  width: 70%;
-  height: 4rem;
+  height: 3rem;
+  width: 48%;
+}
+.reservation button:hover {
+  transform: scale(1.2);
+  opacity: 0.9;
+  transition: all 200ms;
 }
 
 /** ***** section fonctionnement ***/
 #fonction {
-  padding: 2rem 1rem 2rem 2rem;
+  padding: 2rem;
 }
 
 .fonction-list {
@@ -121,7 +139,7 @@ header {
 }
 
 .text-order {
-  font-weight: lighter;
+  font-weight: 600;
 }
 
 .material-icons {
@@ -136,6 +154,109 @@ header {
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
+}
+
+.fonction-choix.choix-pink {
+  background-color: #f5edff;
+}
+
+/*** section restaurants **/
+#restaurants {
+  background-color: #f2f2f2;
+  padding: 3rem 1.2rem 2rem 1.2rem;
+}
+
+.liste-resto {
+  margin: 0;
+  width: 100%;
+  padding: 0.8rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.resto-card-item {
+  width: 100%;
+  min-width: 2.3rem;
+  border-radius: 2rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+  position: relative;
+  transition: filter 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  text-decoration: none;
+  color: black;
+}
+
+.img-resto {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.resto-card {
+  width: 100%;
+  padding: 0.1rem;
+}
+
+.resto-card .tag {
+  background-color: #a9e0d1;
+  color: #3b8468;
+  padding: 0.7rem 1.5rem;
+  position: absolute;
+  bottom: -11.5rem;
+  right: 1.5rem;
+}
+
+/*
+.text-description-resto {
+
+    line-height: 0.5rem;
+
+}*/
+.description-resto {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  background-color: white;
+  border-radius: 0 0 2rem 2rem;
+  padding: 1rem 1.5rem 1rem 1rem;
+}
+
+.addFavoriteIcon {
+  position: relative;
+  font-size: 30px;
+  line-height: 4rem;
+  font-weight: lighter;
+}
+
+/**** footer *****/
+footer {
+  width: 100%;
+  background: #353535;
+  color: white;
+  padding: 1rem 2rem 0rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-titre {
+  font-family: "Shrikhand", "cursive";
+  font-style: italic;
+  font-weight: 700;
+  margin: 1rem 0rem;
+}
+
+.footerlink {
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.footer-icon {
+  font-weight: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

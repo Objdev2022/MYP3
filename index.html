@@ -7,31 +7,33 @@
     <script src="https://kit.fontawesome.com/94da2fc1da.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet">
-    <title>ohmyfood</title>
+    <title>ohmyfood Acceuil</title>
     <link rel="stylesheet" href="css/style.css">
     
 </head>
 <body>
         <header>
-            <img id="logo" src="logo/ohmyfood@2x.svg" alt="Ohmyfood logo"/>      
+            <img id="logo" src="images/logo/ohmyfood@2x.svg" height ="30" width ="173" alt="Ohmyfood logo"/>      
         </header>
     <main>
         <section id="local">
-            <div class="localisation">
-                <i class="fas fa-map-marker-alt"></i>
-                <span class="Text-local">Paris, Belleville</span>          
+             <div class="localisation">
+               <i class="fas fa-map-marker-alt local-icon" aria-hidden="true"></i>
+                
+               <h2 class="Text-local">Paris, Belleville</h2> 
+             </div>       
             
-            </div>
+            
         </section>
 
-        <section id="book">
-            <div class="reservation">
-               <h1 class="book-titre">Réservez le menu qui vous convient</h1>
-               <p class="book-text">Découvrez des réstaurants d'exception,
+        <section class="reservation">
+            
+               <h2>Réservez le menu qui<br> vous convient</h2>
+               <p>Découvrez des réstaurants d'exception,<br>
                 selectionnés par nos soins
                </p>
-               <button class="book-button">Explorez nos restaurants</button>
-            </div>
+               <button>Explorez nos restaurants</button>
+            
 
         </section>
 
@@ -55,13 +57,117 @@
              
 
             
-                <artcile class="fonction-choix">
+                <artcile class="fonction-choix choix-pink">
                   <div class="num-order">3</div>
                   <span class="icon-menu material-icons">storefront</span> 
                   <h3 class="text-order">Dégustez au restaurant</h3>
                 </artcile>
             </div>
-         </section>
+        </section>
+
+
+        <section id="restaurants">
+            <h2 class="titre-section">Restaurants</h2>
+
+            <div class="liste-resto">
+                <article class="resto-card">
+                 <a href="restaurants/lapallete-du-gout.html" class="resto-card-item">
+                    <img class="img-resto" src="images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+                    <div class="tag">Nouveau</div>
+                    
+                    <section class="description-resto">
+                        <div class="text-description-resto">
+                            <h3 class="nom-resto">La palette du goût</h3>
+                            <p class="ville-resto">Ménilmontant</p>
+                        </div>
+                       <!-- <span class="favoriteIcon material-icons">favorite</span>-->
+                        <span class="addFavoriteIcon material-icons">favorite_border</span>
+                    
+                    </section>
+
+                 </a>
+                </article> 
+
+                <article class="resto-card">
+                    <a href="restaurants/lanote-enchantee.html" class="resto-card-item">
+                    <img class="img-resto" src="images/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
+                    <div class="tag">Nouveau</div>
+                    
+                    <section class="description-resto">
+                        <div class="text-description-resto">
+                            <h3 class="nom-resto">La note enchantée</h3>
+                            <p class="ville-resto">Charonne</p>
+                        </div>
+                       <!-- <span class="favoriteIcon material-icons">favorite</span>-->
+                        <span class="addFavoriteIcon material-icons">favorite_border</span>
+                    
+                    </section>
+
+                    </a>
+                </article> 
+
+                <article class="resto-card">
+                    <a href="restaurants/a-la-francaise.html" class="resto-card-item">
+                    <img class="img-resto" src="images/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="La note enchantée">
+                    <div class="tag">Nouveau</div>
+                    
+                    <section class="description-resto">
+                        <div class="text-description-resto">
+                            <h3 class="nom-resto">A la Française</h3>
+                            <p class="ville-resto">Cité rouge</p>
+                        </div>
+                       <!-- <span class="favoriteIcon material-icons">favorite</span>-->
+                        <span class="addFavoriteIcon material-icons">favorite_border</span>
+                    
+                    </section>
+
+                    </a>
+                </article> 
+
+                <article class="resto-card">
+                    <a href="restaurants/ledelice-des-sens.html" class="resto-card-item">
+                    <img class="img-resto" src="images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="La note enchantée">
+                    <div class="tag">Nouveau</div>
+                    
+                    <section class="description-resto">
+                        <div class="text-description-resto">
+                            <h3 class="nom-resto">Le délice des sens</h3>
+                            <p class="ville-resto">Folie-mericourt</p>
+                        </div>
+                       <!-- <span class="favoriteIcon material-icons">favorite</span>-->
+                        <span class="addFavoriteIcon material-icons">favorite_border</span>
+                    
+                    </section>
+
+                    </a>
+                </article> 
+
+            </div>
+
+
+         
+        </section>
     </main>
+
+    <footer>
+       <h3 class="footer-titre">Ohmyfood</h3>
+
+       <nav>
+        <a href="#" class="footerlink">
+            <span class="material-icons footer-icon">restaurant</span>
+            <p>Proposer un restaurant</p>
+        </a>
+        <a href="#" class="footerlink">
+            <span class="material-icons footerIcon">perm_contact_calendar</span>              
+                
+            <p>Devenir partenaire</p>
+
+        </a>
+        <a href="#" class="footerlink">Mention légales</a>
+        <a href="#"class="footerlink">Contacts</a>
+
+       </nav>
+
+    </footer>
 </body>
 </html>

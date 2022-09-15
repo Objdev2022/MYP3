@@ -1,0 +1,32 @@
+
+#local {
+
+    height: 3.5rem;
+    position:relative;
+}
+
+.localisation {
+    display:flex;
+    padding:1.2rem;  
+    background-color:$migrey;
+    gap:1rem;
+    justify-content: center;
+    justify-items: center;
+    
+        & .local-icon 
+            {
+        
+            font-size: 1.1rem;
+            margin-left: -2rem;
+        
+        }
+
+        & .Text-local {
+            font-size: 17px;
+            font-weight: 500;
+            color:#353535;
+           
+         }
+        
+  
+}

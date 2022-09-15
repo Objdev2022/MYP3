@@ -1,0 +1,53 @@
+
+.reservation {
+    
+    background-color: $lightgrey;
+    
+    text-align: center;
+    padding:2.5rem 0.2rem 3rem 0.5rem;
+    
+
+
+    & h2 {
+        font-size: 1.5rem; 
+        margin-bottom: 1rem;
+            
+    }
+
+    & p {
+    
+        font-size: 1.1rem;
+        font-weight: 300;
+        margin-bottom: 29px;
+    
+        
+    }
+
+    & button {
+
+        color:white;
+        border-radius: 30px;
+    
+        text-align: center;
+        justify-items: center;
+        font-size: 15px;
+        white-space: nowrap;
+        font-weight: 500;
+        background: linear-gradient(162deg, $rose-secondaire 1%, $violet-primaire 100%);
+        box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+        border:transparent;
+      
+        height:3rem;
+        width:48%;
+        
+            &:hover {
+                transform: scale(1.2);
+                opacity: 0.9;
+                transition: all 200ms;
+            }
+   
+
+    
+        
+}
+}

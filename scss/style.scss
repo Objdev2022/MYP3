@@ -1,122 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
+/*** configuartion html **/
+@import '../scss/base.scss';
+/**** header ****/
+@import '../scss/layout/header.scss';
+/**** Localisation barre ***/
+@import '../scss/layout/city.scss';
+/*** section invitation à réserver **/
+@import '../scss/layout/reserver.scss';
 
-/************/
-
- 
-$violet-primaire :#9356DC;
-$rose-secondaire :#FF79DA;
-$vert-tertiaire: #99E2D0;
-$lightgrey : #f2f2f2;
-$migrey : #eaeaea;
-$bleue :red;
-
-
-
-* {
-
-    box-sizing: border-box;
-}
-
-
-body {
-    width:450px;
-    margin:0px;
-    font-family: 'Roboto', sans-serif;
-}
-
-header {
-   
-    font-family: 'Shrikhand', 'cursive';
-    text-align: center;
-    padding:0.3rem;
-    font-size: 20px;
-    width:100%;
-    box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
-    margin:0px;
-    z-index: 1000;
-    position:relative;
-
-}
-
-.localisation {
-    display:flex;
-    width:100%;
-    padding:1rem 1rem;
-    font-size: 1.2rem;
-    font-weight: 500;;
-    background-color:$migrey;
-    gap:0.5rem;
-    justify-content: center;
-    justify-items: center;
-   
-  
-}
-
-#logo {
-
-    padding: 1rem 0 0.3rem 0;
-}
-.text-local {
-
-    font-size: 500;
-}
-
-#book{
-    
-    background-color: $lightgrey;
-    
-}
-
-.reservation {
-
-    display:flex;
-    justify-content: center;
-    justify-items: center;
-    flex-direction: column;
-    padding:2.4rem 2rem 3rem 2rem;
-    
-    justify-content: space-between;
-}
-
-.book-titre {
-    font-size: 1.8rem;
-    text-align: center;
-    margin:0px;
-    padding:0 1rem 0 2rem;
-}
-
-.book-text {
-    text-align: center;
-    font-size: 1.4rem;
-    font-weight: 200;
-   
-}
-
-.book-button {
-
-    color:white;
-    padding : 1.5rem 3rem;
-    border-radius: 30px;
-    background-color: $rose-secondaire;
-    text-align: center;
-    justify-items: center;
-    font-size: 16px;
-    white-space: nowrap;
-    background: linear-gradient(162deg, $rose-secondaire 0%, $violet-primaire 100%);
-    
-    border:transparent;
-    margin:1rem 0 1rem 4rem;
-    width:70%;
-    height:4rem;
-        
-}
 
 /** ***** section fonctionnement ***/@at-root
 
 
 #fonction {
-    padding :2rem 1rem 2rem 2rem;
+    padding :2rem;
      
 }
 
@@ -154,7 +50,7 @@ header {
 }
 
 .text-order {
-    font-weight: lighter;
+    font-weight: 600;
 }
 
 .material-icons {
@@ -172,4 +68,132 @@ header {
     direction: ltr;
     
    
+}
+
+.fonction-choix.choix-pink {
+
+    background-color: #f5edff;
+
+}
+
+/*** section restaurants **/@at-root
+
+#restaurants {
+
+    background-color: $lightgrey;
+    padding :3rem 1.2rem 2rem 1.2rem;
+}
+
+.liste-resto {
+
+    margin:0;
+    width:100%;
+    padding:0.8rem 0 0 0;
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+    
+}
+
+.resto-card-item {
+
+    width: 100%;
+    min-width: 2.3rem;
+    border-radius: 2rem;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    cursor: pointer;
+    position: relative;
+    transition: filter 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    text-decoration: none;
+    color:black;
+
+}
+.img-resto {
+
+    height: 15rem;
+    width:100%;
+    object-fit: cover;
+  
+    border-radius: 2rem 2rem 0 0;
+}
+
+.resto-card {
+    width:100%;
+    padding:0.1rem;
+}
+
+.resto-card .tag {
+    
+    
+    background-color: $vert-tag-fond;
+    color :$vert-tag-text;
+    padding:0.7rem 1.5rem;
+    position:absolute;
+    bottom: -11.5rem;
+    right: 1.5rem;
+}
+/*
+.text-description-resto {
+
+    line-height: 0.5rem;
+    
+}*/
+.description-resto {
+
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    background-color: white;
+    border-radius: 0 0 2rem 2rem;
+    padding:1rem 1.5rem 1rem 1rem;
+  
+
+    
+}
+
+.addFavoriteIcon{
+
+    position: relative;
+    font-size: 30px;
+    line-height: 4rem;
+    font-weight: lighter;
+}
+
+/**** footer *****/@at-root
+footer {
+
+    width: 100%;
+    background: #353535;
+    color: white;
+    padding: 1rem 2rem 0rem 2rem;
+    display:flex;
+    flex-direction: column;
+    
+   
+}
+
+
+
+.footer-titre {
+    font-family: 'Shrikhand', 'cursive';
+    font-style: italic;
+    font-weight: 700;
+    margin:1rem 0rem;
+}
+
+.footerlink {
+
+    display:flex;
+    align-items: center; 
+    color:white;
+    gap:0.5rem;
+    text-decoration: none;
+ 
+
+
+}
+
+.footer-icon {
+
+    font-weight: 1.5rem;
 }
