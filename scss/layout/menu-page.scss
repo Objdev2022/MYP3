@@ -1,0 +1,122 @@
+
+.menu-page-header {
+    position: relative;
+    direction: row;
+    
+}
+    
+
+
+
+
+.header__arrow {
+    position: absolute;
+    left: 2rem;
+    height: 2rem;
+    width: 2rem;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.logo-page {
+
+    height: 30px;
+    width:173px;
+    margin-left: 8rem;
+}
+
+.menu-img {
+    max-width: 100%;
+    max-height: 32rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.container-menu {
+    border-radius: 2rem 2rem 0 0;
+    margin-top: -4rem;
+    background-color: #f6f6f6;
+    position:relative;
+    z-index: 1;
+}
+.entete-menu-page {
+    display :flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 2rem 0 1rem;
+    
+}
+
+.entete-menu-page h1 {
+
+     
+        font-family: "Shrikhand", cursive;
+        font-size: 28px;
+        font-weight: 500;
+       
+    
+}
+
+.position-coeur-menu {
+
+   left:-2rem;
+}
+
+/******* Sous menu *****/
+.menu-item {
+
+    
+    box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
+   
+    cursor: pointer;
+   
+}
+.entrees {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:1rem;
+    overflow: hidden;
+}
+
+.entrees h2 {
+
+    font-weight: 400;
+    text-decoration: underline green;
+ 
+}
+
+.sous-menu-1 {
+
+    padding:1rem;
+    border-radius: 0.75rem;
+    border-color: red;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
+
+
+}
+
+.list-sous-menu-page{
+
+  padding:2rem 1rem;
+}
+
+.sous-menu-prix {
+
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left: 0.5rem
+}

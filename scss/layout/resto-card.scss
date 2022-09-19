@@ -1,0 +1,128 @@
+
+#restaurants {
+
+    background-color: $lightgrey;
+    padding :3rem 1.2rem 2rem 1.2rem;
+
+    & h2 {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.liste-resto {
+
+    margin:0;
+    width:100%;
+    padding:0.8rem 0 0 0;
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+    position:relative;
+}
+
+.resto-card-item {
+
+    width: 100%;
+    min-width: 2.3rem;
+    border-radius: 2rem;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    cursor: pointer;
+    position: relative;
+    transition: filter 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    text-decoration: none;
+    color:black;
+
+}
+.img-resto {
+
+    height: 10rem;
+    width:100%;
+    object-fit:cover;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.resto-card {
+    width:100%;
+    padding:0.1rem;
+}
+
+.resto-card .tag {
+    
+   
+    background-color: #99e2d0;
+    color: #1b6150;
+       
+    padding: 0.43rem 0.7rem 0.3rem 0.7rem;
+    border-radius: 0.125rem;
+    position: absolute;
+    top: -7rem;
+    right: 1rem;
+    font-size: 13px;
+    font-weight: 500;
+   
+}
+
+
+.description-resto {
+
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    background-color: white;
+    border-radius: 0 0 2rem 2rem;
+    padding:1rem 1.5rem 1rem 1rem;
+
+    & h3 {
+        font-size: 18px;
+    }
+
+    & p {
+        font-size: 17px;
+        font-weight: 300;
+    }
+    }
+
+
+    
+    
+.addFavoriteIcon{
+
+    position: relative;
+    font-size: 24px;
+    line-height: 2rem;
+    font-weight: lighter;
+
+    &:hover {
+        cursor:pointer;
+        transition-duration: .25s;
+       
+        border :red;
+
+      
+
+
+        
+    }
+}
+
+.addFavoriteIcon1 {
+    color: white;
+    position: relative;
+    font-size: 24px;
+    line-height: 2rem;
+   /* transition: opacity 0.3s ease-in-out;*/
+    & :hover {
+            transition-duration: .25s;
+            color:red;
+    }
+}
+
+.position-coeur {
+
+    position: absolute;
+    top: 36px;
+    left: 353px;
+    height: 100%;
+    width: 100%;
+
+}

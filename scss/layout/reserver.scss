@@ -11,6 +11,7 @@
     & h2 {
         font-size: 1.5rem; 
         margin-bottom: 1rem;
+       
             
     }
 
@@ -19,6 +20,7 @@
         font-size: 1.1rem;
         font-weight: 300;
         margin-bottom: 29px;
+        color:#353535;
     
         
     }
@@ -30,7 +32,7 @@
     
         text-align: center;
         justify-items: center;
-        font-size: 15px;
+        font-size: 16px;
         white-space: nowrap;
         font-weight: 500;
         background: linear-gradient(162deg, $rose-secondaire 1%, $violet-primaire 100%);
@@ -38,7 +40,7 @@
         border:transparent;
       
         height:3rem;
-        width:48%;
+        width:55%;
         
             &:hover {
                 transform: scale(1.2);

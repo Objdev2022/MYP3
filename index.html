@@ -12,7 +12,7 @@
     
 </head>
 <body>
-        <header>
+        <header>   <!-- section header-->
             <img id="logo" src="images/logo/ohmyfood@2x.svg" height ="30" width ="173" alt="Ohmyfood logo"/>      
         </header>
     <main>
@@ -26,7 +26,7 @@
             
         </section>
 
-        <section class="reservation">
+        <section class="reservation">  <!-- section incitation à réserver-->
             
                <h2>Réservez le menu qui<br> vous convient</h2>
                <p>Découvrez des réstaurants d'exception,<br>
@@ -38,35 +38,35 @@
         </section>
 
 
-        <section id="fonction">
+        <section id="fonction">  <!-- section Menu -->
             <h2>Fonctionnement</h2>
             <div class="fonction-list">
                
                 <artcile class="fonction-choix">
                  <div class="num-order">1</div>
-                 <span class="icon-menu material-icons">phone_iphone</span>
-                 <h3 class="text-order">Choisissez un restaurant</h3>
+                 <i class="fa-mobile-alt fas adjust-icon" aria-hidden="true"></i>
+                 <p class="text-order">Choisissez un restaurant</p>
                 </artcile>
                         
             
                 <artcile class="fonction-choix">
                   <div class="num-order">2</div>
-                  <span class="icon-menu material-icons">list</span>                
+                  <i class="fa-list-ul fas adjust-icon" aria-hidden="true"></i>            
                   <h3 class="text-order">Composez votre menu</h3>
                 </artcile>
              
 
             
-                <artcile class="fonction-choix choix-pink">
+                <artcile class="fonction-choix">
                   <div class="num-order">3</div>
-                  <span class="icon-menu material-icons">storefront</span> 
+                  <i class="fa-store fas adjust-icon" aria-hidden="true"></i>
                   <h3 class="text-order">Dégustez au restaurant</h3>
                 </artcile>
             </div>
         </section>
 
 
-        <section id="restaurants">
+        <section id="restaurants"> <!-- section restaurants-->
             <h2 class="titre-section">Restaurants</h2>
 
             <div class="liste-resto">
@@ -81,7 +81,12 @@
                             <p class="ville-resto">Ménilmontant</p>
                         </div>
                        <!-- <span class="favoriteIcon material-icons">favorite</span>-->
-                        <span class="addFavoriteIcon material-icons">favorite_border</span>
+                       <!-- <span class="addFavoriteIcon material-icons">favorite_border</span>-->
+                       <i class="fa-solid fa-heart addFavoriteIcon1 position-coeur" aria-hidden="true"></i>
+                       <i class="fa-regular fa-heart addFavoriteIcon position-coeur" aria-hidden="true"></i>
+                       
+                       
+                       
                     
                     </section>
 
@@ -98,9 +103,8 @@
                             <h3 class="nom-resto">La note enchantée</h3>
                             <p class="ville-resto">Charonne</p>
                         </div>
-                       <!-- <span class="favoriteIcon material-icons">favorite</span>-->
-                        <span class="addFavoriteIcon material-icons">favorite_border</span>
-                    
+                      
+                        <i class="fa-regular fa-heart addFavoriteIcon"></i>
                     </section>
 
                     </a>
@@ -109,16 +113,14 @@
                 <article class="resto-card">
                     <a href="restaurants/a-la-francaise.html" class="resto-card-item">
                     <img class="img-resto" src="images/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="La note enchantée">
-                    <div class="tag">Nouveau</div>
+                    
                     
                     <section class="description-resto">
                         <div class="text-description-resto">
-                            <h3 class="nom-resto">A la Française</h3>
+                            <h3 class="nom-resto">A la française</h3>
                             <p class="ville-resto">Cité rouge</p>
                         </div>
-                       <!-- <span class="favoriteIcon material-icons">favorite</span>-->
-                        <span class="addFavoriteIcon material-icons">favorite_border</span>
-                    
+                        <i class="fa-regular fa-heart addFavoriteIcon"></i>  
                     </section>
 
                     </a>
@@ -127,16 +129,14 @@
                 <article class="resto-card">
                     <a href="restaurants/ledelice-des-sens.html" class="resto-card-item">
                     <img class="img-resto" src="images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="La note enchantée">
-                    <div class="tag">Nouveau</div>
+                    
                     
                     <section class="description-resto">
                         <div class="text-description-resto">
                             <h3 class="nom-resto">Le délice des sens</h3>
                             <p class="ville-resto">Folie-mericourt</p>
                         </div>
-                       <!-- <span class="favoriteIcon material-icons">favorite</span>-->
-                        <span class="addFavoriteIcon material-icons">favorite_border</span>
-                    
+                        <i class="fa-regular fa-heart addFavoriteIcon"></i>
                     </section>
 
                     </a>
@@ -149,22 +149,23 @@
         </section>
     </main>
 
-    <footer>
-       <h3 class="footer-titre">Ohmyfood</h3>
+    <footer> <!-- section footer-->
+       <h3 class="footer-titre">ohmyfood</h3>
 
        <nav>
         <a href="#" class="footerlink">
-            <span class="material-icons footer-icon">restaurant</span>
+            <!--<span class="material-icons footer-icon">restaurant</span>-->
+            <i class="fa-utensils fas footer-icon" aria-hidden="true"></i>
             <p>Proposer un restaurant</p>
         </a>
         <a href="#" class="footerlink">
-            <span class="material-icons footerIcon">perm_contact_calendar</span>              
-                
+           <!-- <span class="material-icons footerIcon">perm_contact_calendar</span>-->              
+            <i class="fa-hands-helping fas footer-icon" aria-hidden="true"></i>    
             <p>Devenir partenaire</p>
 
         </a>
         <a href="#" class="footerlink">Mention légales</a>
-        <a href="#"class="footerlink">Contacts</a>
+        <a href="#"class="footerlink">Contact</a>
 
        </nav>
 
