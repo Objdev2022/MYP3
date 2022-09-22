@@ -34,11 +34,19 @@
     @include box.button-pink;
 
     &:hover {
-        background-color: #f5edff;
+        background-color:#f5edff;
+        
         transform: scale(1.01);
         opacity: 0.9;
         transition: all 200ms;
     }
+
+    &:hover i {
+        color :#9356DC;
+       
+    }
+
+    
 }
     
 .num-order {

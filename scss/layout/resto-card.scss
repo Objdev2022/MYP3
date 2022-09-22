@@ -1,3 +1,4 @@
+@use '../outils-utiles/linear-gradient.scss';
 
 #restaurants {
 
@@ -71,6 +72,7 @@
     background-color: white;
     border-radius: 0 0 2rem 2rem;
     padding:1rem 1.5rem 1rem 1rem;
+    position:relative;
 
     & h3 {
         font-size: 18px;
@@ -79,6 +81,37 @@
     & p {
         font-size: 17px;
         font-weight: 300;
+    }
+
+    & i {
+        position:absolute;
+        right: 2rem;
+        top:50%;
+        font-size: 1.6rem;
+        cursor: pointer;
+        transform: translateY(-50%);  
+     }
+    
+
+    & .fa-solid {
+        color:transparent;
+       /* background-image: linear-gradient(red,blue);*/
+        background-clip: text;
+        --webkit-background-clip :text;
+        opacity: 0;
+        transition:all 200ms ease-in-out;
+       
+    }
+
+    &:hover .fa-solid {
+
+       opacity: 1;
+      /* @include linear-gradient.gradient-violet__rose;*/
+      /* à revoir linear gradient se met sur le fond de l'image*/
+      
+       color: #9356DC;
+       transform: translateY(-50%) scale(1.2);
+
     }
     }
 
