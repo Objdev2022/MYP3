@@ -1,4 +1,6 @@
 @mixin gradient-violet__rose {
-    background: linear-gradient(162deg, #FF79DA 1%, #9356DC 100%);
-    
+    background-image: linear-gradient(162deg, #FF79DA 1%, #9356DC 100%);
+
+   /* background-image: linear-gradient(to top, rgba(147,86,220,0.9), rgba(255,121,218,0.9));
+*/
 }

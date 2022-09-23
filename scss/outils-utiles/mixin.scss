@@ -1,0 +1,27 @@
+@mixin button-pink {
+
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+}
+
+@mixin base-shadow {
+    box-shadow: 1px 1px 8px -3px black;
+    
+}
+
+@mixin gradient-violet__rose {
+    background-image: linear-gradient(162deg, #FF79DA 1%, #9356DC 100%);
+
+   /* background-image: linear-gradient(to top, rgba(147,86,220,0.9), rgba(255,121,218,0.9));
+*/
+}
+
+@mixin apparition-categorie__menu {
+    @for $i from 1 through 3 {
+        &:nth-child(#{$i})
+         {
+
+            animation-delay: 100ms *$i;
+        }
+       }
+
+}

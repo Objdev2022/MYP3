@@ -99,7 +99,9 @@ main {
   font-size: 16px;
   white-space: nowrap;
   font-weight: 500;
-  background: linear-gradient(162deg, #FF79DA 1%, #9356DC 100%);
+  background-image: linear-gradient(162deg, #FF79DA 1%, #9356DC 100%);
+  /* background-image: linear-gradient(to top, rgba(147,86,220,0.9), rgba(255,121,218,0.9));
+  */
   /* background: linear-gradient(162deg, $rose-secondaire 1%, $violet-primaire 100%);*/
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   border: transparent;
@@ -112,6 +114,47 @@ main {
   transition: all 200ms;
 }
 
+.loader {
+  /*compteur*/
+  display: grid;
+  place-items: center;
+  position: fixed;
+  background-color: white;
+  height: 100vh;
+  /* avec position fixed il faut définit left et right */
+  inset: 0; /** remplace top bottom left right même principe margin et padding*/
+  z-index: 1; /** le z-index le plus haut passe au dessus. la position doit être définie**/
+  opacity: 0.9;
+  animation: disappear 200ms 3s; /* on peut mettre forwards ici*/
+  animation-fill-mode: forwards;
+  transform-origin: top; /* disparaîttre vers le haut */
+  /*animation-delay: 2*$duree-anim;*/
+}
+.loader::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #9356DC;
+  border-radius: 50%;
+  animation: spin 1s infinite linear; /** linear vitesse constante de rotation **/
+  animation-iteration-count: 3;
+}
+
+@keyframes disappear {
+  /** faire dispparaitre l'animation du loader **/
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 /** ***** section fonctionnement ***/
 /** box-shadow boutton partie fonctionnement **/
 #fonction {
@@ -283,26 +326,28 @@ main {
   border: red;
 }
 
+/*
 .addFavoriteIcon1 {
-  color: white;
-  position: relative;
-  font-size: 24px;
-  line-height: 2rem;
-  /* transition: opacity 0.3s ease-in-out;*/
-}
-.addFavoriteIcon1 :hover {
-  transition-duration: 0.25s;
-  color: red;
+    color: white;
+    position: relative;
+    font-size: 24px;
+    line-height: 2rem;
+   /* transition: opacity 0.3s ease-in-out;
+    & :hover {
+            transition-duration: .25s;
+            color:red;
+    }
 }
 
 .position-coeur {
-  position: absolute;
-  top: 36px;
-  left: 353px;
-  height: 100%;
-  width: 100%;
-}
 
+    position: absolute;
+    top: 36px;
+    left: 353px;
+    height: 100%;
+    width: 100%;
+
+}*/
 /**** footer *****/
 footer {
   width: 100%;
@@ -341,13 +386,22 @@ footer nav {
 }
 
 /***** style pages ****/
-/** box-shadow boutton partie fonctionnement **/
 @keyframes quarter-spin {
   0% {
     transform: rotate(270deg);
   }
   100% {
     transform: rotate(0);
+  }
+}
+@keyframes appear {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0; /*scale(0);*/
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 .menu-page-header {
@@ -436,12 +490,22 @@ footer nav {
 }
 
 .item { /** non de class de la section sous menu*/
+  /** fixer le délais de l'animation pour chaque enfant **/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 1rem;
   overflow: hidden;
   margin-top: 1rem;
+}
+.item:nth-child(1) {
+  animation-delay: 100ms;
+}
+.item:nth-child(2) {
+  animation-delay: 200ms;
+}
+.item:nth-child(3) {
+  animation-delay: 300ms;
 }
 .item .sous-menu-titre {
   text-transform: uppercase;
@@ -459,6 +523,8 @@ footer nav {
   align-items: center;
   overflow: hidden;
   cursor: pointer;
+  animation: appear 1s;
+  animation-fill-mode: both; /* les éléménts restent affichés aprés l'animation*/
 }
 .sous-menu-1 .sous-menu-item {
   padding: 1rem;
