@@ -1,4 +1,6 @@
-@use '../outils-utiles/linear-gradient.scss';
+@use '../outils-utiles/mixin.scss';
+@use '../outils-utiles/color.scss';
+
 .reservation {
     
     background-color: $lightgrey;
@@ -35,7 +37,7 @@
         font-size: 16px;
         white-space: nowrap;
         font-weight: 500;
-        @include linear-gradient.gradient-violet__rose;
+        @include mixin.gradient-violet__rose;
        /* background: linear-gradient(162deg, $rose-secondaire 1%, $violet-primaire 100%);*/
         box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
         border:transparent;
@@ -53,4 +55,55 @@
     
         
 }
+}
+
+.loader {
+    $duree-anim: 1s;
+    $cpt: 3; /*compteur*/
+    display: grid;
+    place-items: center;
+    position:fixed;
+    background-color: #ffff;
+    height: 100vh;
+    /* avec position fixed il faut définit left et right */
+    inset : 0;  /** remplace top bottom left right même principe margin et padding*/
+    z-index: 1;  /** le z-index le plus haut passe au dessus. la position doit être définie**/
+    opacity:0.9 ;
+    animation: disappear 200ms ($duree-anim*$cpt); /* on peut mettre forwards ici*/
+    animation-fill-mode: forwards;
+    transform-origin: top;   /* disparaîttre vers le haut */
+    /*animation-delay: 2*$duree-anim;*/
+
+    &::after {
+        content:"" ;
+        height: 100px;
+        width: 100px;
+        border-right:6px solid transparent;
+        border-top: 6px solid color.$violet-primaire;
+        border-radius: 50%;
+
+
+        animation: spin $duree-anim infinite linear; /** linear vitesse constante de rotation **/
+        animation-iteration-count: $cpt; 
+    
+    }
+}
+
+@keyframes disappear {
+
+    /** faire dispparaitre l'animation du loader **/
+    from {
+        transform: scale(1);
+    }
+
+    to{
+
+        transform: scale(0);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }

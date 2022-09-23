@@ -1,4 +1,4 @@
-@import '../outils-utiles/box-shadow.scss';
+@use '../outils-utiles/mixin.scss';
 @import '../outils-utiles/animations.scss';
 
 .menu-page-header {
@@ -99,6 +99,7 @@
 .list-sous-menu-page{
 
     padding:0.5rem 1rem;
+   
   }
   
 .menu-item {        /** une section  -- gérer le visuel**/
@@ -114,6 +115,10 @@
 
 
 .item {            /** non de class de la section sous menu*/
+
+    /** fixer le délais de l'animation pour chaque enfant **/
+       
+    @include mixin.apparition-categorie__menu;
 
     display: flex;
     flex-direction: column;
@@ -142,8 +147,9 @@
 
 .sous-menu-1 
 {
-    
-       
+
+   
+
         border-radius: 0.75rem;
         display: flex;
         justify-content: space-between;
@@ -152,6 +158,8 @@
         align-items: center;
         overflow: hidden;
         cursor: pointer;
+        animation: appear 1s;
+        animation-fill-mode: both;  /* les éléménts restent affichés aprés l'animation*/
        
 
         & .sous-menu-item

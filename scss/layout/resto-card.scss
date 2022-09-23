@@ -1,4 +1,4 @@
-@use '../outils-utiles/linear-gradient.scss';
+@use '../outils-utiles/mixin.scss';
 
 #restaurants {
 
@@ -108,7 +108,7 @@
        opacity: 1;
       /* @include linear-gradient.gradient-violet__rose;*/
       /* à revoir linear gradient se met sur le fond de l'image*/
-      
+
        color: #9356DC;
        transform: translateY(-50%) scale(1.2);
 
@@ -138,12 +138,14 @@
     }
 }
 
+
+/*
 .addFavoriteIcon1 {
     color: white;
     position: relative;
     font-size: 24px;
     line-height: 2rem;
-   /* transition: opacity 0.3s ease-in-out;*/
+   /* transition: opacity 0.3s ease-in-out;
     & :hover {
             transition-duration: .25s;
             color:red;
@@ -158,4 +160,4 @@
     height: 100%;
     width: 100%;
 
-}
+}*/
