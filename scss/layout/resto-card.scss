@@ -141,8 +141,38 @@
 
 @media screen and (min-width:600px) {
     .img-resto {
-        height: 40vw;
+       height: 25vw;
     }
+
+    .resto-card {
+
+        width:47%;
+    }
+
+
+    .liste-resto {
+
+        flex-direction: row;
+        flex-wrap: wrap;
+            
+    }
+
+   
+}
+
+
+@media screen and (min-width:900px) {
+    .img-resto {
+       height: 30vw;
+    }
+
+    .resto-card {
+
+        width:100%;
+    }
+
+
+   
 }
 
     
