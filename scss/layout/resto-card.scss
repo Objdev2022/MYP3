@@ -139,25 +139,13 @@
 }
 
 
-/*
-.addFavoriteIcon1 {
-    color: white;
-    position: relative;
-    font-size: 24px;
-    line-height: 2rem;
-   /* transition: opacity 0.3s ease-in-out;
-    & :hover {
-            transition-duration: .25s;
-            color:red;
+@media screen and (min-width:600px) {
+    .img-resto {
+        height: 40vw;
     }
 }
 
-.position-coeur {
+    
 
-    position: absolute;
-    top: 36px;
-    left: 353px;
-    height: 100%;
-    width: 100%;
 
-}*/
+

@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
 /************/
+/*********/
 * {
   margin: 0;
   box-sizing: border-box;
@@ -14,15 +15,22 @@ html {
 }
 
 body {
-  max-width: 450px;
+  /* @include largeur__ecran ($largeur-e);*/
+  /*  width:largeur__ecran($largeur-e);*/
+  /* width:425px;*/
   margin: 0px 0px;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   scroll-behavior: smooth;
+  min-width: 375px;
 }
 
 a {
   text-decoration: none;
+}
+
+.mobile-first {
+  width: 100%;
 }
 
 /**** header ****/
@@ -76,6 +84,19 @@ main {
 }
 
 /*** section invitation à réserver **/
+/*
+@function largeur__ecran ($l) {
+   $width : 0;
+    @if ($l=1) {
+       $width :450px; 
+       @return $width;
+    }
+
+    @else {
+        $width :1024px;
+        @return $width;
+    }
+}*/
 .reservation {
   background-color: #f2f2f2;
   text-align: center;
@@ -121,7 +142,7 @@ main {
   position: fixed;
   background-color: white;
   height: 100vh;
-  /* avec position fixed il faut définit left et right */
+  /* avec position fixed il faut définir left et right */
   inset: 0; /** remplace top bottom left right même principe margin et padding*/
   z-index: 1; /** le z-index le plus haut passe au dessus. la position doit être définie**/
   opacity: 0.9;
@@ -153,6 +174,16 @@ main {
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+@media screen and (min-width: 600px) {
+  .reservation button {
+    width: 34%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .reservation button {
+    width: 25%;
   }
 }
 /** ***** section fonctionnement ***/
@@ -220,6 +251,19 @@ main {
 }
 
 /*** section restaurants **/
+/*
+@function largeur__ecran ($l) {
+   $width : 0;
+    @if ($l=1) {
+       $width :450px; 
+       @return $width;
+    }
+
+    @else {
+        $width :1024px;
+        @return $width;
+    }
+}*/
 #restaurants {
   background-color: #f2f2f2;
   padding: 3rem 1.2rem 2rem 1.2rem;
@@ -326,28 +370,11 @@ main {
   border: red;
 }
 
-/*
-.addFavoriteIcon1 {
-    color: white;
-    position: relative;
-    font-size: 24px;
-    line-height: 2rem;
-   /* transition: opacity 0.3s ease-in-out;
-    & :hover {
-            transition-duration: .25s;
-            color:red;
-    }
+@media screen and (min-width: 600px) {
+  .img-resto {
+    height: 40vw;
+  }
 }
-
-.position-coeur {
-
-    position: absolute;
-    top: 36px;
-    left: 353px;
-    height: 100%;
-    width: 100%;
-
-}*/
 /**** footer *****/
 footer {
   width: 100%;
@@ -386,6 +413,19 @@ footer nav {
 }
 
 /***** style pages ****/
+/*
+@function largeur__ecran ($l) {
+   $width : 0;
+    @if ($l=1) {
+       $width :450px; 
+       @return $width;
+    }
+
+    @else {
+        $width :1024px;
+        @return $width;
+    }
+}*/
 @keyframes quarter-spin {
   0% {
     transform: rotate(270deg);
@@ -467,7 +507,7 @@ footer nav {
   opacity: 0;
   transition: all 200ms ease-in-out;
 }
-.entete-menu-page:hover .fa-solid {
+.entete-menu-page:hover .fa-solid { /* remplacer par checked .. version mobile**/
   opacity: 1;
   color: #9356DC;
   transform: translateY(-50%) scale(1.2);
@@ -595,6 +635,9 @@ footer nav {
 /**** section bouton commander ***/
 .commander {
   padding: 2rem;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
 }
 
 .commander-ok {
@@ -610,7 +653,14 @@ footer nav {
   border: transparent;
   height: 3rem;
   width: 44%;
-  margin-left: 7rem;
+  /*  margin-left: 7rem;*/
+}
+
+@media screen and (min-width: 600px) {
+  .commander-ok {
+    /*  margin-left: 22rem;*/
+    width: 25%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

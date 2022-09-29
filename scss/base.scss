@@ -14,6 +14,9 @@ $vert-tag-fond :#a9e0d1;
 $vert-tag-text :#3b8468;
 $migrey1: #f3f3f3;
 
+/*********/
+$largeur-e:1;
+
 
 
 * {
@@ -32,13 +35,25 @@ html {
 
 
 body {
-    max-width:450px;
+    /* @include largeur__ecran ($largeur-e);*/
+    /*  width:largeur__ecran($largeur-e);*/
+
+   /* width:425px;*/
     margin:0px 0px;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     scroll-behavior: smooth;
+    min-width: 375px;
 }
 
 a {
   text-decoration: none;
 }
+
+.mobile-first {
+
+    width:100%;
+}
+
+
+

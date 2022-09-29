@@ -25,3 +25,16 @@
        }
 
 }
+/*
+@function largeur__ecran ($l) {
+   $width : 0;
+    @if ($l=1) {
+       $width :450px; 
+       @return $width;
+    }
+ 
+    @else {
+        $width :1024px;
+        @return $width;
+    }
+}*/

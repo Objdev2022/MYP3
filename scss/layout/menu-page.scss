@@ -72,7 +72,7 @@
        
     }
 
-    &:hover .fa-solid {
+    &:hover .fa-solid {  /* remplacer par checked .. version mobile**/
        opacity: 1;
        color: #9356DC;
        transform: translateY(-50%) scale(1.2);
@@ -99,6 +99,7 @@
 .list-sous-menu-page{
 
     padding:0.5rem 1rem;
+   
    
   }
   
@@ -275,6 +276,9 @@
 .commander {
 
     padding :2rem;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
 
 }
 
@@ -292,5 +296,14 @@
     border: transparent;
     height: 3rem;
     width: 44%;
-    margin-left: 7rem;
+  /*  margin-left: 7rem;*/
+}
+
+
+@media screen and (min-width:600px) {
+    .commander-ok {
+      /*  margin-left: 22rem;*/
+        width :25%;
+
+    }
 }
