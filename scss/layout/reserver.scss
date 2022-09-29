@@ -43,7 +43,9 @@
         border:transparent;
       
         height:3rem;
-        width:55%;
+       /* width:10rem;      55%;*/
+
+        padding :0.75rem 1.5rem;
         
             &:hover {
                 transform: scale(1.2);
@@ -108,19 +110,3 @@
     }
 }
 
-
-@media screen and (min-width:600px) {
-    .reservation button {
-     
-        width :34%;
-
-    }
-}
-
-@media screen and (min-width:800px) {
-    .reservation button {
-      
-        width :25%;
-
-    }
-}

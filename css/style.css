@@ -127,7 +127,8 @@ main {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   border: transparent;
   height: 3rem;
-  width: 55%;
+  /* width:10rem;      55%;*/
+  padding: 0.75rem 1.5rem;
 }
 .reservation button:hover {
   transform: scale(1.2);
@@ -174,16 +175,6 @@ main {
 @keyframes spin {
   to {
     transform: rotate(360deg);
-  }
-}
-@media screen and (min-width: 600px) {
-  .reservation button {
-    width: 34%;
-  }
-}
-@media screen and (min-width: 800px) {
-  .reservation button {
-    width: 25%;
   }
 }
 /** ***** section fonctionnement ***/
@@ -372,7 +363,22 @@ main {
 
 @media screen and (min-width: 600px) {
   .img-resto {
-    height: 40vw;
+    height: 25vw;
+  }
+  .resto-card {
+    width: 47%;
+  }
+  .liste-resto {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 900px) {
+  .img-resto {
+    height: 30vw;
+  }
+  .resto-card {
+    width: 100%;
   }
 }
 /**** footer *****/
@@ -449,6 +455,21 @@ footer nav {
   direction: row;
 }
 
+.retour-index {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+}
+.retour-index > div {
+  width: 50%;
+}
+.retour-index .container-img {
+  display: flex;
+  justify-content: center;
+}
+
 .header__arrow {
   position: absolute;
   left: 2rem;
@@ -466,7 +487,6 @@ footer nav {
 .logo-page {
   height: 30px;
   width: 173px;
-  margin-left: 8rem;
 }
 
 .menu-img {
@@ -522,6 +542,8 @@ footer nav {
 /******* Sous menu *****/
 .list-sous-menu-page {
   padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .menu-item { /** une section  -- gérer le visuel**/
@@ -552,6 +574,8 @@ footer nav {
   position: relative;
   font-weight: 400;
   color: #353535;
+  animation: appear 1s;
+  animation-fill-mode: both;
 }
 
 .sous-menu-1 {
@@ -652,14 +676,19 @@ footer nav {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   border: transparent;
   height: 3rem;
-  width: 44%;
-  /*  margin-left: 7rem;*/
+  padding: 0.75rem 2.75rem;
 }
 
-@media screen and (min-width: 600px) {
-  .commander-ok {
-    /*  margin-left: 22rem;*/
-    width: 25%;
+@media screen and (min-width: 900px) {
+  .list-sous-menu-page {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .item {
+    width: 35%;
+  }
+  .item .sous-menu-1 {
+    /* width :50%;*/
   }
 }
 
