@@ -4,6 +4,26 @@
 .menu-page-header {
     position: relative;
     direction: row;
+   
+}
+
+.retour-index {
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+
+    & > div {
+
+        width:50%;
+    }
+
+    & .container-img {
+
+        display:flex;
+        justify-content: center;
+    }
 }
  
 .header__arrow {
@@ -24,7 +44,7 @@
 
     height: 30px;
     width:173px;
-    margin-left: 8rem;
+ 
 }
 
 .menu-img {
@@ -99,6 +119,9 @@
 .list-sous-menu-page{
 
     padding:0.5rem 1rem;
+    display:flex;
+    flex-direction: column;
+
    
    
   }
@@ -140,6 +163,8 @@
         font-weight: 400;
     
         color: #353535;
+        animation: appear 1s;
+        animation-fill-mode: both;
 
         
     }
@@ -295,15 +320,28 @@
     box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
     border: transparent;
     height: 3rem;
-    width: 44%;
-  /*  margin-left: 7rem;*/
+    padding : 0.75rem 2.75rem;
 }
 
 
-@media screen and (min-width:600px) {
-    .commander-ok {
-      /*  margin-left: 22rem;*/
-        width :25%;
 
-    }
+@media screen and (min-width:900px) {
+   .list-sous-menu-page {
+
+    flex-direction: row;
+    gap:2rem;
+
+   } 
+
+   .item {
+
+    width :35%;
+   
+   }
+
+   .item .sous-menu-1 {
+
+   /* width :50%;*/
+   }
+   
 }
