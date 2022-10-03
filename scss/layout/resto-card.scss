@@ -28,7 +28,7 @@
     border-radius: 2rem;
     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
     cursor: pointer;
-    position: relative;
+   /* position: relative;*/
     transition: filter 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     text-decoration: none;
     color:black;
@@ -45,6 +45,7 @@
 .resto-card {
     width:100%;
     padding:0.1rem;
+    position:relative;
 }
 
 .resto-card .tag {
@@ -56,9 +57,9 @@
     padding: 0.43rem 0.7rem 0.3rem 0.7rem;
     border-radius: 0.125rem;
     position: absolute;
-    top: -7rem;
+    top: 2rem;
     right: 1rem;
-    font-size: 13px;
+    font-size: 100%;       /* 13px;*/
     font-weight: 500;
    
 }
@@ -92,10 +93,11 @@
         transform: translateY(-50%);  
      }
     
-
+     
     & .fa-solid {
         color:transparent;
        /* background-image: linear-gradient(red,blue);*/
+       /*background-image: linear-gradient(162deg, #FF79DA 1%, #9356DC 100%);*/
         background-clip: text;
         --webkit-background-clip :text;
         opacity: 0;
@@ -103,14 +105,17 @@
        
     }
 
-    &:hover .fa-solid {
-
+    &:active .fa-solid {
+   
+     
        opacity: 1;
       /* @include linear-gradient.gradient-violet__rose;*/
       /* à revoir linear gradient se met sur le fond de l'image*/
 
-       color: #9356DC;
+      /* color: linear-gradient(red,blue); /*   #9356DC;*/
+       color:$violet-primaire;
        transform: translateY(-50%) scale(1.2);
+       
 
     }
     }
@@ -171,6 +176,7 @@
         width:100%;
     }
 
+   
 
    
 }
