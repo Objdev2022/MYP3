@@ -23,20 +23,22 @@
 
 .resto-card-item {
 
-    width: 100%;
-    min-width: 2.3rem;
-    border-radius: 2rem;
+   /* width: 100%;
+    min-width: 2.3rem;*/
+    border-radius: 1rem;
     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
     cursor: pointer;
    /* position: relative;*/
     transition: filter 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     text-decoration: none;
     color:black;
+    display:block;
+    background-color: white;
 
 }
 .img-resto {
 
-    height: 10rem;
+    height: 12rem;
     width:100%;
     object-fit:cover;
     border-radius: 1rem 1rem 0 0;
@@ -129,7 +131,7 @@
     }
 
 
-    
+  /*  
     
 .addFavoriteIcon{
 
@@ -150,7 +152,7 @@
         
     }
 }
-
+*/
 
 @media screen and (min-width:600px) {
     .img-resto {

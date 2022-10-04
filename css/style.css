@@ -275,19 +275,21 @@ main {
 }
 
 .resto-card-item {
-  width: 100%;
-  min-width: 2.3rem;
-  border-radius: 2rem;
+  /* width: 100%;
+   min-width: 2.3rem;*/
+  border-radius: 1rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   cursor: pointer;
   /* position: relative;*/
   transition: filter 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   text-decoration: none;
   color: black;
+  display: block;
+  background-color: white;
 }
 
 .img-resto {
-  height: 10rem;
+  height: 12rem;
   width: 100%;
   object-fit: cover;
   border-radius: 1rem 1rem 0 0;
@@ -358,18 +360,28 @@ main {
   transform: translateY(-50%) scale(1.2);
 }
 
-.addFavoriteIcon {
-  position: relative;
-  font-size: 24px;
-  line-height: 2rem;
-  font-weight: lighter;
-}
-.addFavoriteIcon:hover {
-  cursor: pointer;
-  transition-duration: 0.25s;
-  border: red;
-}
+/*  
 
+.addFavoriteIcon{
+
+    position: relative;
+    font-size: 24px;
+    line-height: 2rem;
+    font-weight: lighter;
+
+    &:hover {
+        cursor:pointer;
+        transition-duration: .25s;
+
+        border :red;
+
+
+
+
+
+    }
+}
+*/
 @media screen and (min-width: 600px) {
   .img-resto {
     height: 25vw;
@@ -566,9 +578,7 @@ footer nav {
   flex-direction: column;
 }
 
-.menu-item { /** une section  -- gérer le visuel**/
-  cursor: pointer;
-}
+.menu-item { /** une section  -- gérer le visuel**/ }
 
 .item { /** nom de classe de la section sous menu*/
   /** fixer le délais de l'animation pour chaque enfant **/
@@ -578,6 +588,7 @@ footer nav {
   gap: 1rem;
   overflow: hidden;
   margin-top: 2rem;
+  cursor: pointer;
 }
 .item:nth-child(1) {
   animation-delay: 100ms;
@@ -603,7 +614,7 @@ footer nav {
   display: flex;
   justify-content: space-between;
   background-color: #fff;
-  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);*/
   /*align-items: center;* /** enlever pour mettre le prix en bas**/
   overflow: hidden;
   cursor: pointer;
