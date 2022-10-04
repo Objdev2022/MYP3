@@ -137,10 +137,7 @@
 .menu-item {        /** une section  -- gérer le visuel**/
 
     
-     
-    cursor: pointer;
-
-    
+      
 }
    
 
@@ -157,6 +154,8 @@
     gap:1rem;
     overflow: hidden;
     margin-top: 2rem;
+    cursor: pointer;
+    
   
 
 
@@ -172,6 +171,7 @@
         color: #353535;
         animation: appear 1s;
         animation-fill-mode: both;
+       
 
         
     }
@@ -186,7 +186,7 @@
         display: flex;
         justify-content: space-between;
         background-color: #fff;
-        box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
+       /* box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);*/
         /*align-items: center;* /** enlever pour mettre le prix en bas**/
         overflow: hidden;
         cursor: pointer;
