@@ -3,7 +3,7 @@ footer {
     width: 100%;
     background: #353535;
     color: white;
-    padding: 0.2rem 2rem 2rem 2rem;
+    padding: 0.2rem 2rem 2rem 1.5rem;
     display:flex;
     flex-direction: column;
     
@@ -14,10 +14,10 @@ footer {
 
 .footer-titre {
     font-family: 'Shrikhand', 'cursive';
-    font-weight: 200;
-    margin:1rem 0rem;
-    font-size: 1.1rem;
+    font-weight: 100;
+    margin:1rem 0rem 0.95rem 0rem;
     color:white;
+    font-size: 17px;
 }
 
 .footerlink {
@@ -26,21 +26,32 @@ footer {
     align-items: center; 
     color:white;
     text-decoration: none;
- 
+
+    
 
 
 }
+
+
+footer nav {
+    display: flex;
+    flex-direction: column;
+    gap:0.3rem;
+
+    font-size: 15px;
+    font-weight: 300;
+}
+
 
 .footer-icon {
 
        margin-right: 0.5rem;
     
-       font-size: 0.8rem;
+       font-size: 0.7rem;
        font-weight: 1.5rem;
 }
 
-footer nav {
-     display: flex;
-     flex-direction: column;
-     gap:0.5rem;
+.footerlink .titre-propose {
+
+    margin-left: 0.3rem;
 }
