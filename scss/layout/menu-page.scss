@@ -36,8 +36,9 @@
     align-items: center;
     justify-content: center;
     transform: translateY(-50%);
-    font-size: 1.2rem;
+    font-size:22px;       /*1.2rem;*/
     color: #000;
+    font-weight: bold;
 }
 
 .logo-page {
@@ -69,14 +70,14 @@
     justify-content: space-between;
     align-items: center;
     position:relative;
-    padding: 1rem 2rem 0 1rem;
+    padding: 2rem 2rem 0rem 1rem;
 
     
 
     & i {
         position:absolute;
         right: 2rem;
-        top:66%;
+        top:61%;
         font-size: 1.6rem;
         cursor: pointer;
         transform: translateY(-50%);      
@@ -84,17 +85,24 @@
 
     & .fa-solid {
         color:transparent;
-      /*  background-image: linear-gradient(red,blue);*/
+      
+        background-image: linear-gradient(162deg, #FF79DA 1%, #9356DC 100%);
         background-clip: text;
         --webkit-background-clip :text;
         opacity: 0;
         transition:all 200ms ease-in-out;
        
+         /* appliquer le dégrader au bouton coeur */
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         -moz-background-clip: text;
+         -moz-text-fill-color: transparent;
+        
     }
 
-    &:hover .fa-solid {  /* remplacer par checked .. version mobile**/
+    &:hover .fa-solid {  
        opacity: 1;
-       color: #9356DC;
+      
        transform: translateY(-50%) scale(1.2);
 
              
@@ -129,8 +137,7 @@
 .menu-item {        /** une section  -- gérer le visuel**/
 
     
-   /* box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);*/
-   
+     
     cursor: pointer;
 
     
@@ -138,7 +145,7 @@
    
 
 
-.item {            /** non de class de la section sous menu*/
+.item {            /** nom de classe de la section sous menu*/
 
     /** fixer le délais de l'animation pour chaque enfant **/
        
@@ -149,7 +156,7 @@
     justify-content: space-between;
     gap:1rem;
     overflow: hidden;
-    margin-top: 1rem;
+    margin-top: 2rem;
   
 
 
@@ -161,7 +168,7 @@
         position: relative;
        
         font-weight: 400;
-    
+        font-size: 18px;
         color: #353535;
         animation: appear 1s;
         animation-fill-mode: both;
@@ -175,13 +182,12 @@
 {
 
    
-
         border-radius: 0.75rem;
         display: flex;
         justify-content: space-between;
         background-color: #fff;
         box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
-        align-items: center;
+        /*align-items: center;* /** enlever pour mettre le prix en bas**/
         overflow: hidden;
         cursor: pointer;
         animation: appear 1s;
@@ -191,17 +197,19 @@
         & .sous-menu-item
         {
 
-            padding:1rem;
+            padding:0.5rem;
            
             overflow: hidden;
         }
         
         & .sous-menu-item h4 {
 
-            font-weight: 600;
+            font-weight: 500;
             white-space:nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
+            font-size: 18px;
+            margin-bottom: 0.3rem;
             
             
         }
@@ -211,18 +219,21 @@
             white-space:nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
+            font-size: 16px;
         }
 
 
         & .sous-menu-prix {
         
-            font-weight: 700;
+            font-weight: 500;
             display: flex;
             justify-content: flex-end;
             align-items: flex-end;
             padding-left: 0.5rem;
             margin-left:auto;
-            padding: 1rem;
+            /*padding: 1rem;*/
+
+            padding : 0.5rem 1rem 0.5rem 0.5rem;
         }
 
               
@@ -233,7 +244,7 @@
             place-items: center;
             background-color:$vert-tertiaire;
             width:5rem;  
-            height: 5rem;      
+            height: 4rem;      
             margin-right: -5rem;
             border-radius: 0 1rem 1rem 0;
             transition: all 0.5s;  /* margin-right donne le même résultat*/
@@ -269,8 +280,7 @@
             animation: quarter-spin 1s ease;
         }
 
-        
-           
+                   
     
         }
        
