@@ -23,12 +23,11 @@
 
 .resto-card-item {
 
-   /* width: 100%;
-    min-width: 2.3rem;*/
+   
     border-radius: 1rem;
     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
     cursor: pointer;
-   /* position: relative;*/
+   
     transition: filter 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     text-decoration: none;
     color:black;
@@ -61,7 +60,7 @@
     position: absolute;
     top: 1rem;
     right: 1rem;
-    font-size: 100%;       /* 13px;*/
+    font-size: 100%;       
     font-weight: 500;
    
 }
@@ -98,10 +97,9 @@
      
     & .fa-solid {
         color:transparent;
-       /* background-image: linear-gradient(red,blue);*/
-       background-image: linear-gradient(162deg, #FF79DA 1%, #9356DC 100%);
+        background-image: linear-gradient(162deg, #FF79DA 1%, #9356DC 100%);
         background-clip: text;
-        --webkit-background-clip :text;
+       /* --webkit-background-clip :text;  prefexeur en cas que backgorund-clip ne marche pas*/
         opacity: 0;
         transition:all 200ms ease-in-out;
          /* appliquer le dégrader au bouton coeur */
@@ -117,12 +115,10 @@
    
      
        opacity: 1;
-      /* @include linear-gradient.gradient-violet__rose;*/
-      /* à revoir linear gradient se met sur le fond de l'image*/
-
-      /*color: linear-gradient(red,blue); /*   #9356DC;*/
-      /* color:$violet-primaire;*/
+      
        transform: translateY(-50%) scale(1.2);
+
+       /** translateY(-50%) sinon il sera écraser par le deuxième transform**/
 
            
        
@@ -131,34 +127,8 @@
     }
 
 
-  /*  
-    
-.addFavoriteIcon{
-
-    position: relative;
-    font-size: 24px;
-    line-height: 2rem;
-    font-weight: lighter;
-
-    &:hover {
-        cursor:pointer;
-        transition-duration: .25s;
-       
-        border :red;
-
-      
-
-
-        
-    }
-}
-*/
-
 @media screen and (min-width:600px) {
-    .img-resto {
-       height: 25vw;
-    }
-
+  
     .resto-card {
 
         width:47%;
@@ -177,19 +147,22 @@
 
 
 @media screen and (min-width:900px) {
-    .img-resto {
-       height: 30vw;
+    .liste-resto {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width:100%;
     }
 
     .resto-card {
 
-        width:100%;
+            width:23%;
+        }
     }
 
    
 
    
-}
+
 
     
 

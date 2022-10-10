@@ -23,7 +23,7 @@
 
 .fonction-choix {
     padding: 1.5rem;
-   /* box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);*/
+
     border-radius: 1.25rem;
     background-color: #f6f6f6;
     display: flex;
@@ -31,7 +31,7 @@
     align-items: center;
     justify-items: center;
     gap:0.30rem;
-    @include box.button-pink;
+    @include box.button-boxshadow; /** bos-shadox remplacer*/
 
     &:hover {
         background-color:#f5edff;
@@ -42,7 +42,8 @@
     }
 
     &:hover i {
-        color :#9356DC;
+       
+            color :$violet-primaire;
        
     }
 
@@ -75,3 +76,23 @@
     font-size: 1.20rem;
     margin-left: 0.5rem;
 }
+
+
+
+@media screen and (min-width:600px) {
+    .fonction-list {
+ 
+     flex-direction: row;
+     gap:2rem;
+ 
+    } 
+
+    .fonction-choix {
+
+        width:40%;
+    }
+ 
+    
+    
+ }
+ 

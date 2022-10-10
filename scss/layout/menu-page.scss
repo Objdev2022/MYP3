@@ -134,19 +134,13 @@
    
   }
   
-.menu-item {        /** une section  -- gérer le visuel**/
-
-    
-      
-}
-   
 
 
 .item {            /** nom de classe de la section sous menu*/
 
     /** fixer le délais de l'animation pour chaque enfant **/
        
-    @include mixin.apparition-categorie__menu;
+   
 
     display: flex;
     flex-direction: column;
@@ -155,6 +149,8 @@
     overflow: hidden;
     margin-top: 2rem;
     cursor: pointer;
+
+   @include mixin.apparition-categorie__menu;
     
   
 
@@ -180,13 +176,13 @@
 
 .sous-menu-1 
 {
-
+    @include mixin.apparition-categorie__menu;
    
         border-radius: 0.75rem;
         display: flex;
         justify-content: space-between;
         background-color: #fff;
-       /* box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);*/
+       
         /*align-items: center;* /** enlever pour mettre le prix en bas**/
         overflow: hidden;
         cursor: pointer;
@@ -231,8 +227,6 @@
             align-items: flex-end;
             padding-left: 0.5rem;
             margin-left:auto;
-            /*padding: 1rem;*/
-
             padding : 0.5rem 1rem 0.5rem 0.5rem;
         }
 

@@ -1,7 +1,9 @@
-@mixin button-pink {
+@use '../outils-utiles/color.scss';
+/*
+@mixin button-boxshadow {
 
     box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
-}
+}*/
 
 @mixin base-shadow {
     box-shadow: 1px 1px 8px -3px black;
@@ -9,10 +11,10 @@
 }
 
 @mixin gradient-violet__rose {
-    background-image: linear-gradient(162deg, #FF79DA 1%, #9356DC 100%);
+    
+    background: linear-gradient(162deg, color.$rose-secondaire 1%, color.$violet-primaire 100%)
 
-   /* background-image: linear-gradient(to top, rgba(147,86,220,0.9), rgba(255,121,218,0.9));
-*/
+   
 }
 
 @mixin apparition-categorie__menu {
@@ -25,16 +27,3 @@
        }
 
 }
-/*
-@function largeur__ecran ($l) {
-   $width : 0;
-    @if ($l=1) {
-       $width :450px; 
-       @return $width;
-    }
- 
-    @else {
-        $width :1024px;
-        @return $width;
-    }
-}*/
