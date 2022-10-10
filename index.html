@@ -12,18 +12,18 @@
    <meta name="description" content="Ohmyfood! est une entreprise de commande de
     repas en ligne. Notre concept permet aux utilisateurs de composer leur propre 
     menu et réduire leur temps d’attente dans les restaurants.">
-    <!-- description du resto ** recherche google -->
+    <!-- description du resto s'affiche suite à une recherche google -->
    <link rel="stylesheet" href="css/style.css">
     
 </head>
 <body>
     <div class="mobile-first">
         <div class="loader">
-           <!--<i class="fas fa-circle-notch fa-spin fa-10"></i>-->
+          
        
         </div>
         <header>   <!-- section header-->
-            <img id="logo" src="images/logo/ohmyfood@2x.svg" height ="30" width ="173" alt="Ohmyfood logo"/>      
+            <img id="logo" src="images/logo/ohmyfood@2x.svg" height ="30" width ="173" alt="Ohmyfood logo">      
         </header>
     <main>
         <section id="local">
@@ -50,7 +50,7 @@
 
         <section id="fonction">  <!-- section Menu -->
             <h2>Fonctionnement</h2>
-            <div class="fonction-list">
+            <div class="fonction-list">  <!--le valideur refuse div parent de article-->
                
                 <artcile class="fonction-choix">
                  <div class="num-order">1</div>
@@ -91,15 +91,10 @@
                             <h3 class="nom-resto">La palette du goût</h3>
                             <p class="ville-resto">Ménilmontant</p>
                         </div>
-                       <!-- <span class="favoriteIcon material-icons">favorite</span>-->
-                       <!-- <span class="addFavoriteIcon material-icons">favorite_border</span>-->
-                      <!-- <i class="fa-solid fa-heart addFavoriteIcon1 position-coeur" aria-hidden="true"></i>
-                       <i class="fa-regular fa-heart addFavoriteIcon position-coeur" aria-hidden="true"></i>
-                      -->
-                       <i class="fa-regular fa-heart" aria-hidden="true"></i>
-                       <i class="fa-solid fa-heart" aria-hidden="true"></i>
-                       
-                       
+                      
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                                            
                        
                        
                     
@@ -184,7 +179,7 @@
 
         </a>
         <a href="#" class="footerlink">Mentions légales</a>
-        <a href="#"class="footerlink">Contact</a>
+        <a href="#" class="footerlink">Contact</a>
 
        </nav>
 
