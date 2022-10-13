@@ -31,7 +31,7 @@ header {
   background: white;
   z-index: 2;
   font-family: "Shrikhand", cursive;
-  font-size: 2, 5rem;
+  font-size: 2.5rem;
   height: 5rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   position: relative;
@@ -124,15 +124,18 @@ main {
   place-items: center;
   position: fixed;
   background-color: white;
-  /* height: 100vh;*/
   /* avec position fixed il faut définir left et right */
-  inset: 0; /** remplace top bottom left right même principe margin et padding*/
+  inset: 0; /** remplace top bottom left right même principe margin et padding ne fonctionne pas pour tout les supports*/
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 1; /** le z-index le plus haut passe au dessus. la position doit être définie**/
   opacity: 0.9;
   animation: disappear 200ms 3s; /* on peut mettre forwards ici*/
   animation-fill-mode: forwards;
   transform-origin: top; /* disparaîttre vers le haut */
-  /*animation-delay: 2*$duree-anim;*/
+  /*animation-delay: 2*$duree-anim;*/ /* cette ligne est rajouté à animation*/
 }
 .loader::after {
   content: "";
@@ -156,7 +159,7 @@ main {
 }
 @keyframes spin {
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* faire tourner le spinner */
   }
 }
 /** ***** section fonctionnement ***/
@@ -172,7 +175,7 @@ main {
   display: flex;
   flex-direction: column;
   padding: 0;
-  gap: 1.2rem;
+  gap: 19.2px;
   margin-bottom: 2rem;
 }
 
@@ -186,7 +189,7 @@ main {
   justify-items: center;
   gap: 0.3rem;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
-  /** bos-shadox remplacer*/
+  /** box-shadox remplacer*/
 }
 .fonction-choix:hover {
   background-color: #f5edff;
@@ -223,13 +226,18 @@ main {
   margin-left: 0.5rem;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
   .fonction-list {
     flex-direction: row;
     gap: 2rem;
   }
   .fonction-choix {
-    width: 40%;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .fonction-list {
+    width: 97%;
   }
 }
 /*** section restaurants **/
@@ -329,7 +337,7 @@ main {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
-.description-resto:hover:active .fa-solid {
+.description-resto:active .fa-solid {
   opacity: 1;
   transform: translateY(-50%) scale(1.2);
   /** translateY(-50%) sinon il sera écraser par le deuxième transform**/
@@ -348,7 +356,12 @@ main {
   .liste-resto {
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 100%;
+  }
+  .text-description-resto > h3 {
+    font-size: 12px;
+  }
+  .description-resto p {
+    font-size: 12px;
   }
   .resto-card {
     width: 23%;
@@ -390,7 +403,6 @@ footer nav {
 .footer-icon {
   margin-right: 0.5rem;
   font-size: 0.7rem;
-  font-weight: 1.5rem;
 }
 
 .footerlink .titre-propose {
@@ -423,7 +435,7 @@ footer nav {
 }
 .menu-page-header {
   position: relative;
-  direction: row;
+  /*direction: row;*/
 }
 
 .retour-index {
@@ -613,7 +625,7 @@ footer nav {
   display: grid;
   place-items: center;
   background-color: white;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1; /* la forme est plus belle */
   width: 2rem;
   border-radius: 1rem;
   color: #99E2D0;
@@ -633,11 +645,6 @@ footer nav {
   position: absolute;
   left: 0;
   bottom: 0;
-}
-
-/**** gérer le wrap **/
-.menuItem__icon {
-  background-color: #99e2d0;
 }
 
 /**** section bouton commander ***/

@@ -66,15 +66,19 @@
     place-items: center;
     position:fixed;
     background-color: #ffff;
-   /* height: 100vh;*/
+   
     /* avec position fixed il faut définir left et right */
-    inset : 0;  /** remplace top bottom left right même principe margin et padding*/
+    inset : 0;  /** remplace top bottom left right même principe margin et padding ne fonctionne pas pour tout les supports*/
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     z-index: 1;  /** le z-index le plus haut passe au dessus. la position doit être définie**/
     opacity:0.9 ;
     animation: disappear 200ms ($duree-anim*$cpt); /* on peut mettre forwards ici*/
     animation-fill-mode: forwards;
     transform-origin: top;   /* disparaîttre vers le haut */
-    /*animation-delay: 2*$duree-anim;*/
+    /*animation-delay: 2*$duree-anim;*/ /* cette ligne est rajouté à animation*/
 
     &::after {
         content:"" ;
@@ -83,7 +87,6 @@
         border-right:6px solid transparent;
         border-top: 6px solid color.$violet-primaire;
         border-radius: 50%;
-
 
         animation: spin $duree-anim infinite linear; /** linear vitesse constante de rotation **/
         animation-iteration-count: $cpt; 
@@ -106,7 +109,7 @@
 
 @keyframes spin {
     to {
-        transform: rotate(360deg);
+        transform: rotate(360deg);   /* faire tourner le spinner */
     }
 }
 

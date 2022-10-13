@@ -1,9 +1,10 @@
 @use '../outils-utiles/mixin.scss';
 @import '../outils-utiles/animations.scss';
 
+
 .menu-page-header {
     position: relative;
-    direction: row;
+    /*direction: row;*/
    
 }
 
@@ -86,7 +87,7 @@
     & .fa-solid {
         color:transparent;
       
-        background-image: linear-gradient(162deg, #FF79DA 1%, #9356DC 100%);
+        background-image: linear-gradient(162deg, $rose-secondaire 1%, $violet-primaire 100%);
         background-clip: text;
         --webkit-background-clip :text;
         opacity: 0;
@@ -249,7 +250,7 @@
                 display: grid;
                 place-items: center;
                 background-color: white;
-                aspect-ratio:1 ;
+                aspect-ratio:1/1 ;  /* la forme est plus belle */
                 width:2rem;
                 border-radius: 1rem;
                 color:$vert-tertiaire;           
@@ -289,15 +290,6 @@
         position: absolute;
         left: 0;
         bottom: 0;
-}
-
-/**** gérer le wrap **/
-
-.menuItem__icon {
- 
-    background-color: #99e2d0;
- 
-  
 }
 
 
